@@ -1,4 +1,6 @@
-﻿namespace Desafio01IT.Model
+﻿using Desafio01IT.Services;
+
+namespace Desafio01IT.Model
 {
     public class Elenco
     {
@@ -14,24 +16,15 @@
             Posicao = posicao;
         }
 
-        public int CalcularIdade()
+        private int CalcularIdade()
         {
-            var now = DateTime.Now;
-
-            int YearsOld = (now.Year - Nascimento.Year);
-
-            if (now.Month < Nascimento.Month || (now.Month == Nascimento.Month && now.Day < Nascimento.Day))
-            {
-                YearsOld--;
-            }
-
-            return (YearsOld < 0) ? 0 : YearsOld;
+            return DataService.CalcularIdade(Nascimento);
         }
 
         public int ValorBonificacao()
         {
             int valorBonificacao = 0;
             return valorBonificacao;
-        }
+        }        
     }
 }

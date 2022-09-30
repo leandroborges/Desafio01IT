@@ -8,6 +8,11 @@ namespace Desafio01IT.Model
         public string Nome { get; set; }
         public DateTime Fundacao { get; set; }
 
+        public Time(DateTime fundacao)
+        {
+            Fundacao = fundacao;
+        }
+
         public bool IsValid()
         {
             return DataService.IsValid(Fundacao);

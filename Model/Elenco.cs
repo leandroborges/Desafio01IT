@@ -10,12 +10,6 @@ namespace Desafio01IT.Model
         public string Posicao { get; set; }
         public DateTime Nascimento { get; set; }
 
-
-        public Elenco(string posicao)
-        {
-            Posicao = posicao;
-        }
-
         private int CalcularIdade()
         {
             return DataService.CalcularIdade(Nascimento);

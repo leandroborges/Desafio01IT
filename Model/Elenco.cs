@@ -1,13 +1,17 @@
 ﻿using Desafio01IT.Services;
+using System.ComponentModel.DataAnnotations;
 
 namespace Desafio01IT.Model
 {
     public class Elenco
     {
+        [Key]
         public int Id { get; set; }
-        public int IdTime { get; set; }
+        public int IdTime { get; set; }        
+        [Required]
         public string Nome { get; set; }
         public string Posicao { get; set; }
+        [Required]
         public DateTime Nascimento { get; set; }
         public Time Time { get; set; }
 

@@ -9,7 +9,12 @@
         public DateTime Nascimento { get; set; }
 
 
-        public int Idade()
+        public Elenco(string posicao)
+        {
+            Posicao = posicao;
+        }
+
+        public int CalcularIdade()
         {
             var now = DateTime.Now;
 
@@ -21,11 +26,6 @@
             }
 
             return (YearsOld < 0) ? 0 : YearsOld;
-        }
-
-        private bool EstaLesionado()
-        {
-            return false;
         }
 
         public int ValorBonificacao()

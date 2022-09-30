@@ -7,6 +7,7 @@ namespace Desafio01IT.Model
         public int Id { get; set; }
         public string Nome { get; set; }
         public DateTime Fundacao { get; set; }
+        public ICollection<Elenco> Elenco { get; set; }
 
         public Time(DateTime fundacao)
         {

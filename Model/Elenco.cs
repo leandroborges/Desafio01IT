@@ -9,6 +9,7 @@ namespace Desafio01IT.Model
         public string Nome { get; set; }
         public string Posicao { get; set; }
         public DateTime Nascimento { get; set; }
+        public Time Time { get; set; }
 
         private int CalcularIdade()
         {
